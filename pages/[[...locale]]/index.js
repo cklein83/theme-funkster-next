@@ -65,8 +65,6 @@ export default function Home({ preview, data, modules, locale }) {
 
 // -------
 
-
-
 const getPathSlugs = () => {
   let x = [[], ["en"]].map((locale) => ({
     params: {
@@ -76,7 +74,6 @@ const getPathSlugs = () => {
   console.log(x)
   return x
 }
-  
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
@@ -85,7 +82,6 @@ export async function getStaticPaths(...args) {
     fallback: false
   };
 }
-
 
 export async function getStaticProps({ preview = false, params }) {
 

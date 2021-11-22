@@ -1,16 +1,16 @@
 
 import Head from 'next/head'
 
-import * as api from '../../lib/api'
+import * as api from '../lib/api'
 
-import Nav from '../../partials/layout/nav'
-import { MultiNav } from '../../partials/layout/nav'
-import * as nav from '../../partials/layout/nav'
-import Footer, * as footer from '../../partials/layout/footer'
+import Nav from '../partials/layout/nav'
+import { MultiNav } from '../partials/layout/nav'
+import * as nav from '../partials/layout/nav'
+import Footer, * as footer from '../partials/layout/footer'
 
-import RichText from '../../components/richtext';
+import RichText from '../components/richtext';
 
-import { modules } from '../../lib/modules'
+import { modules } from '../lib/modules'
 
 
 export default function Privacy({ preview, data, modules }) {
@@ -54,6 +54,7 @@ export default function Privacy({ preview, data, modules }) {
 
 // -------
 
+/*
 const getPathSlugs = () => {
   let x = [[], ["en"]].map((locale) => ({
     params: {
@@ -71,12 +72,11 @@ export async function getStaticPaths(...args) {
     fallback: false
   };
 }
+*/
 
-export async function getStaticProps({ preview = false, params }) {
+export async function getStaticProps({ preview = false }) {
 
-  console.log("LOC-from-PAR: " + params.locale)
-  let locale = params.locale === undefined ? "de-DE" : "en"
-  console.log("Locale: " + locale)
+  let locale = "de-DE"
 
   /*
   console.log("MODULES:")
