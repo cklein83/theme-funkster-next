@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&amp;family=Open+Sans:wght@800&amp;family=Roboto+Condensed:wght@300&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&amp;family=Open+Sans:wght@800&amp;family=Roboto+Condensed:wght@400&amp;display=swap" rel="stylesheet" />
 
 
       </Head>

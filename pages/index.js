@@ -122,7 +122,7 @@ export async function getStaticProps({ preview = false, locale }) {
   }
 
   return {
-    props: { preview, data, modules }
+    props: { preview, data, modules, locale }
   }
 }
 
