@@ -44,11 +44,13 @@ export default function Gallery({ data }) {
 
 export default function Gallery({ data }) {
 
-    useEffect(() => {         
+    useEffect(() => {   
+        /*      
         const lightbox = GLightbox({
             selector: '.glightbox',
             loop: true
-        });      
+        });
+        */      
     })
 
     return (
