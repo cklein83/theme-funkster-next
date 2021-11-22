@@ -54,7 +54,7 @@ export default function Nav({ data, modules, locale, sectionated = true }) {
                             )}
                         </ul>
 
-                        <LanguageSelector locale={locale} />
+                        {modules.multilang ?<LanguageSelector locale={locale} /> : <></>}
 
                     </div>
                 </div>
@@ -160,7 +160,7 @@ export function MultiNav({ data, modules, locale, sectionated = true }) {
                         </ul>
                     </div>
 
-                    <LanguageSelector locale={locale} />
+                    {modules.multilang ?<LanguageSelector locale={locale} /> : <></>}
                     
                 </div>
             </nav>

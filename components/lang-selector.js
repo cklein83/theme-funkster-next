@@ -4,11 +4,13 @@ import { useRouter } from 'next/router';
 const LanguageSelector = ({ locale = "de-DE" }) => {
     const router = useRouter()
 
+    /*
     function rewriteLangPath(path, lang) {
         console.log("P: " + path)
         let repl = lang == "de" ? "" : "en"
         return path.replace(/(\/(de|en))|\//, "/" + repl + "/");
     }
+    */
 
     return (
         <div className="multilang dropdown disable-autohide me-2">
@@ -26,7 +28,7 @@ const LanguageSelector = ({ locale = "de-DE" }) => {
 
             <ul className="dropdown-menu">
                 <li>
-                    {/*
+                    
                     <Link href={router.pathname} locale="de-DE">
                         <a className="dropdown-item pb-1">
                             <img className="lang-img me-2" src="/img/lang/de.svg" width="16px" height="16px" alt="Deutsch" />
@@ -35,7 +37,8 @@ const LanguageSelector = ({ locale = "de-DE" }) => {
                             </span>                        
                         </a>
                     </Link>
-                    */}
+                    
+                    {/*
                     <Link href={rewriteLangPath(router.asPath, "de")}>
                         <a className="dropdown-item pb-1">
                             <img className="lang-img me-2" src="/img/lang/de.svg" width="16px" height="16px" alt="Deutsch" />
@@ -43,14 +46,15 @@ const LanguageSelector = ({ locale = "de-DE" }) => {
                                 Deutsch
                             </span>                        
                         </a>
-                    </Link>                    
+                    </Link>  
+                    */}                  
                 </li>                
                 <li>
-                    <Link href={rewriteLangPath(router.asPath, "en")}>
+                    <Link href={router.pathname} locale="en">
                         <a className="dropdown-item pb-1">
                             <img className="lang-img me-2" src="/img/lang/gb.svg" width="16px" height="16px" alt="English" />
                             <span className="lang-text">
-                                Englisch
+                                English
                             </span>                        
                         </a>
                     </Link>

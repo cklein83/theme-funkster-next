@@ -54,29 +54,7 @@ export default function Privacy({ preview, data, modules }) {
 
 // -------
 
-/*
-const getPathSlugs = () => {
-  let x = [[], ["en"]].map((locale) => ({
-    params: {
-      locale,
-    },
-  }));
-  console.log(x)
-  return x
-}
-
-export async function getStaticPaths(...args) {
-  const pathsWithLocale = getPathSlugs();
-  return {
-    paths: pathsWithLocale,
-    fallback: false
-  };
-}
-*/
-
-export async function getStaticProps({ preview = false }) {
-
-  let locale = "de-DE"
+export async function getStaticProps({ preview = false, locale }) {
 
   /*
   console.log("MODULES:")
