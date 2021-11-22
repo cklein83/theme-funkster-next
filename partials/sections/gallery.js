@@ -45,18 +45,16 @@ export default function Gallery({ data }) {
 export default function Gallery({ data }) {
 
     useEffect(() => {   
-        /*      
         const lightbox = GLightbox({
             selector: '.glightbox',
             loop: true
-        });
-        */      
+        });     
     })
 
     return (
         <>
             <div className="container">
-                <SectionHead data={data.filters} />
+                <SectionHead data={data.gallery} />
 
                 <div className="section-body row g-4 justify-content-center m-2 p-2 wow fadeInUp">
                     <div className="col-lg-4">

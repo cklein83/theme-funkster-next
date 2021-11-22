@@ -19,6 +19,7 @@ import Countdown from '../sections/countdown'
 import Slider from "../sections/slider";
 import Filters from '../sections/filters'
 import Gallery from '../sections/gallery'
+import { useEffect } from 'react'
 
 
 export default function Main({ data, modules }) {

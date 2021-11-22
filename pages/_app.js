@@ -5,6 +5,9 @@ import Head from "next/head";
 
 import { useRouter } from 'next/router';
 
+import Script from 'next/script'
+
+
 /*
 // add bootstrap css 
 import 'bootstrap/dist/css/bootstrap.css'
@@ -42,11 +45,13 @@ function MyApp({ Component, pageProps }) {
   }, []);
 */
 
-  useEffect(() => {
 
+  useEffect(() => {
       import('bootstrap/dist/js/bootstrap.js')
 
-      //new WOW().init()
+      import("wowjs")
+      new WOW().init()
+
   }, []);
 
   useEffect(() => {
@@ -68,17 +73,16 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" async={true}></script>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-        <script type="text/javascript" src="/js/wow.min.js" async={true}></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
         <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&amp;family=Open+Sans:wght@800&amp;family=Roboto+Condensed:wght@400&amp;display=swap" rel="stylesheet" />
 
-
       </Head>
+      <Script type="text/javascript" src="/js/wow.min.js" strategy="beforeInteractive"></Script>
+      <Script type="text/javascript" src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js" strategy="beforeInteractive"></Script>
       <Component {...pageProps} />
     </>
   );
