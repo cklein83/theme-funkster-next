@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }) {
 
       import('bootstrap/dist/js/bootstrap.js')
 
-      new WOW().init()
+      //new WOW().init()
   }, []);
 
   useEffect(() => {
